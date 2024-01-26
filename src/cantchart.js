@@ -16,6 +16,9 @@
 
 // This is a script for Hubot that will get a random comment from a GitHub
 // issue, in this case hard-coded to be issue#1 at websages/hates-sofware
+
+/*jshint esversion: 6 */
+
 module.exports = function(robot) {
 
   const axios = require('axios');
@@ -57,4 +60,4 @@ module.exports = function(robot) {
         process.exit(1);
       });
   });
-}
+};
