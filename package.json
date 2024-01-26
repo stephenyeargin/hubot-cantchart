@@ -1,0 +1,29 @@
+{
+  "name": "hubot-cantchart",
+  "version": "0.1.0",
+  "description": "Stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stahnma/hubot-cantchart.git"
+  },
+  "keywords": [
+    "hubot",
+    "excuses",
+    "cantchart",
+    "websages",
+    "hates-software"
+  ],
+  "author": "stahnma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stahnma/hubot-cantchart/issues"
+  },
+  "homepage": "https://github.com/stahnma/hubot-cantchart#readme",
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+}
