@@ -1,15 +1,22 @@
 {
   "name": "hubot-cantchart",
   "version": "0.1.0",
-  "description": "Stuff",
+  "description": "Get a new excuse for why you can't get any work done",
   "main": "index.js",
   "scripts": {
+    "lint": "jshint src/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stahnma/hubot-cantchart.git"
   },
+  "peerDependencies": {
+    "hubot": "^3"
+  },
+  "devDependencies": {
+		"jshint": "^2.9.4"
+	},
   "keywords": [
     "hubot",
     "excuses",
@@ -17,7 +24,7 @@
     "websages",
     "hates-software"
   ],
-  "author": "stahnma",
+  "author": "Michael Stahnke <stahnma@devops.af>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/stahnma/hubot-cantchart/issues"
