@@ -1,0 +1,46 @@
+[
+    {
+        "url": "https://api.github.com/repos/websages/hates-software/issues/comments/391079273",
+        "html_url": "https://github.com/websages/hates-software/issues/1#issuecomment-391079273",
+        "issue_url": "https://api.github.com/repos/websages/hates-software/issues/1",
+        "id": 391079273,
+        "node_id": "MDEyOklzc3VlQ29tbWVudDM5MTA3OTI3Mw==",
+        "user": {
+            "login": "stahnma",
+            "id": 6961,
+            "node_id": "MDQ6VXNlcjY5NjE=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6961?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/stahnma",
+            "html_url": "https://github.com/stahnma",
+            "followers_url": "https://api.github.com/users/stahnma/followers",
+            "following_url": "https://api.github.com/users/stahnma/following{/other_user}",
+            "gists_url": "https://api.github.com/users/stahnma/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/stahnma/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/stahnma/subscriptions",
+            "organizations_url": "https://api.github.com/users/stahnma/orgs",
+            "repos_url": "https://api.github.com/users/stahnma/repos",
+            "events_url": "https://api.github.com/users/stahnma/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/stahnma/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "created_at": "2018-05-22T17:43:17Z",
+        "updated_at": "2018-05-22T17:43:31Z",
+        "author_association": "MEMBER",
+        "body": "**Let's take this offline**\r\n\r\n> Critical decisions must be made, but rather than make them and have an effective meeting, somebody just suggests we take an item offline. Then no follow-up ever occurs and thus the only decision that was made was that we're not currently making a decision. ",
+        "reactions": {
+            "url": "https://api.github.com/repos/websages/hates-software/issues/comments/391079273/reactions",
+            "total_count": 2,
+            "+1": 2,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+        },
+        "performed_via_github_app": null
+    }
+]

@@ -18,7 +18,7 @@ add `hubot-cantchart` to your `external-scripts` file.
 
 # Configuration
 
-You need a `GITHUB_TOKEN` environment variable set so you can make API calls to github.
+You need a `HUBOT_GITHUB_TOKEN` environment variable set so you can make API calls to github. If one isn't found, it will fall back to `GITHUB_TOKEN`. If that is also not found, it will return an error.
 
 # Usage
 

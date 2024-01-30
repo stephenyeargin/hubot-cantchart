@@ -5,11 +5,10 @@
 //   axios
 //
 // Configuration:
-//  GITHUB_TOKEN
+//  HUBOT_GITHUB_TOKEN - Personal access token for interacting with the GitHub API
 //
 // Commands:
 //   hubot can't chart -- get a new excuse for why you can't get any work done
-//   hubot exuse -- put yourself on the can't chart 
 //
 // Author: stahnma, websages
 //
@@ -20,44 +19,51 @@
 /*jshint esversion: 6 */
 
 module.exports = function(robot) {
-
-  const axios = require('axios');
-
   const username = 'websages';
   const repository = 'hates-software';
   const issueNumber = 1;
 
   const baseURL = 'https://api.github.com/repos/';
   const authHeader = 'Bearer';
-  const token = process.env.GITHUB_TOKEN || 'YOUR_ACCESS_TOKEN';
-  if (token == 'YOUR_ACCESS_TOKEN' ) {
-    robot.logger.error('GITHUB_TOKEN not set');
-    return;
-  }
+  const token = process.env.HUBOT_GITHUB_TOKEN || process.env.GITHUB_TOKEN;
   const url = `${baseURL}${username}/${repository}/issues/${issueNumber}/comments`;
 
+  /**
+   * Check if configuration is set
+   * @param {object} msg Hubot message envelope 
+   * @returns void
+   */
+  const checkConfiguration = (msg) => {
+    if (!token) {
+      robot.logger.error('Neither `HUBOT_GITHUB_TOKEN` nor `GITHUB_TOKEN` set');
+      msg.send('`HUBOT_GITHUB_TOKEN` is not set.');
+      return false;
+    }
+    return true;
+  }
+
   robot.respond(/\S*excuse\S*|\S*cant chart\S*|can\'t chart\S*/i, function(msg) {
-    axios.get(url, {
-        headers: {
-          Authorization: `${authHeader} ${token}`,
-        },
-      })
-      .then(response => {
-        const comments = response.data;
+    if (!checkConfiguration(msg)) {
+      return;
+    }
+    robot.http(url)
+      .header('Authorization', `${authHeader} ${token}`)
+      .get()(function(err, _res, body) {
+        if (err) {
+          robot.logger.error(err);
+          msg.send('Error making request: ' + err.message);
+          return;
+        }
+        const comments = JSON.parse(body);
         if(comments.length === 0) {
           console.log('No comments found for the specified issue.');
-          process.exit(1);
+          return;
         }
 
         const randomComment = comments[Math.floor(Math.random() * comments.length)];
         robot.logger.debug(`Author: ${randomComment.user.login}`);
         robot.logger.debug(`Comment Body: ${randomComment.body}`);
         msg.send('"' + randomComment.body + '" -- ' + randomComment.user.login);
-
       })
-      .catch(error => {
-        console.error('Error making request:', error.message);
-        process.exit(1);
-      });
   });
 };
