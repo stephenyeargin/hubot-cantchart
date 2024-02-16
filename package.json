@@ -1,13 +1,11 @@
 {
   "name": "hubot-cantchart",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get a new excuse for why you can't get any work done",
   "main": "index.js",
   "scripts": {
     "lint": "jshint src/*.js",
-    "prepare": "husky install",
-    "test": "script/test"
-  },
+    "test": "script/test" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stahnma/hubot-cantchart.git"
@@ -19,7 +17,6 @@
 		"jshint": "^2.9.4",
     "chai": "^4.3.10",
     "hubot-test-helper": "^1.9.0",
-    "husky": "^8.0.3",
     "mocha": "^10.2.0",
     "nock": "^13.4.0",
     "sinon-chai": "^3.7.0",
@@ -32,7 +29,7 @@
     "websages",
     "hates-software"
   ],
-  "author": "Michael Stahnke <stahnma@devops.af>",
+  "author": "Michael Stahnke <stahnma@websages.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/stahnma/hubot-cantchart/issues"
