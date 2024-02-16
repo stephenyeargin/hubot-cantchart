@@ -1,17 +1,16 @@
 // Description:
-//   Get a new excuse for why you can't get any work done
-//
-// Dependencies:
-//   axios
+//   Get a new excuse for why you can not get any work done
 //
 // Configuration:
 //  HUBOT_GITHUB_TOKEN - Personal access token for interacting with the GitHub API
 //
 // Commands:
-//   hubot can't chart -- get a new excuse for why you can't get any work done
+//   hubot cant chart - get a new excuse for why you cant get any work done
 //
-// Author: stahnma, websages
+// Author:
+//   stahnma, websages
 //
+// Category: workflow
 
 // This is a script for Hubot that will get a random comment from a GitHub
 // issue, in this case hard-coded to be issue#1 at websages/hates-sofware
